@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Love Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: #fff0f5cc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #c71585;
+    }
+
+    .header-note {
+      position: absolute;
+      top: 2.5rem;
+      right: 3rem;
+      font-weight: bold;
+      color: #c71585;
+      font-size: 1rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #c71585;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff69b4;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 0;
+      position: relative;
+    }
+
+    .hero img {
+      width: 94%;
+      max-width: 1100px;
+      height: 450px;
+      object-fit: cover;
+      object-position: center 10%;
+      display: block;
+      margin: 2rem auto 0 auto;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-text {
+      margin: 1rem auto 2rem auto;
+      color: #c71585;
+      max-width: 94%;
+      animation: fadeInUp 1.5s ease forwards;
+      opacity: 0;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .sections {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 3rem auto;
+      gap: 2rem;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      flex: 1 1 200px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
+      color: #c71585;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1rem;
+      color: #c71585;
+      font-weight: bold;
+    }
+
+    .verse {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff0f5cc;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: #c71585;
+      font-style: italic;
+      font-weight: bold;
+      line-height: 1.8;
+    }
+
+    .verse small {
+      display: block;
+      margin-top: 1rem;
+      font-weight: normal;
+      font-size: 0.9rem;
+    }
+
+    .our-story-text {
+      max-width: 900px;
+      margin: 2rem auto 4rem auto;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #c71585;
+      line-height: 1.8;
+      padding: 0 1rem;
+      background: #fff0f5cc;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Us Forever 💖</div>
+    <div class="header-note">
+      Made with ❤️ by 🐿️ for Mickky — Always and Forever.
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="https://i.ibb.co/mCq690RP/Whats-App-Image-2025-06-11-at-13-24-42-45b1bfca.jpg" alt="Love Image">
+  </section>
+
+  <div class="hero-text">
+    <h1>Every love story is beautiful,</h1>
+    <p>But ours is unique, directed by GOD.</p>
+  </div>
+
+  <section class="sections">
+    <div class="card" onclick="document.getElementById('our-story').scrollIntoView({ behavior: 'smooth' })">
+      <h2>📚 Our Story</h2>
+      <p>How we met, fell in love, and created a world of our own.</p>
+    </div>
+    <div class="card">
+      <h2>🎥 How We Fell in Love</h2>
+      <p>An animated journey of every little moment that brought us together.</p>
+    </div>
+  </section>
+
+  <div class="our-story-text" id="our-story">
+    <p>
+      Our story began in the most unexpected way — a simple message from her, asking for help designing a poster. I was the designer for IEEE at college, and she had reached out. But little did I know, that one text would change my life forever.
+    </p>
+    <p>
+      What drew me in first was her profile picture — a beautiful quote about God. That single detail sparked a curiosity in my heart, something I couldn’t ignore. As we started talking, it felt so easy, so right. 
+    </p>
+    <p>
+      Slowly, we discovered what truly bonded us: our faith, our love for Christ, and our unwavering belief in God. That divine connection became the foundation of something truly special between us — a love that felt guided from above.
+    </p>
+    <p>
+      And from that moment on, our journey has been nothing short of a blessing — one crafted not by chance, but with purpose. Directed by God, always.
+    </p>
+  </div>
+
+  <section class="verse">
+    <p>"Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It is not rude, it is not self-seeking, it is not easily angered, it keeps no record of wrongs.<br>
+    Love does not delight in evil but rejoices with the truth. It bears all things, believes all things, hopes all things, endures all things. Love never fails."</p>
+    <small> - 1 Corinthians 13:4-8</small>
+  </section>
+
+  <footer>
+    ✝️ May Christ hold our love in His embrace, guiding us eternally. 🕊️
+  </footer>
+</body>
+</html>
