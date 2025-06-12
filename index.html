@@ -21,12 +21,14 @@
 
     header {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 3rem;
+      padding: 1.5rem 1rem;
       background: #fff0f5cc;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: relative;
+      text-align: left;
     }
 
     .logo {
@@ -36,12 +38,10 @@
     }
 
     .header-note {
-      position: absolute;
-      top: 2.5rem;
-      right: 3rem;
       font-weight: bold;
       color: #c71585;
-      font-size: 1rem;
+      font-size: 0.9rem;
+      text-align: right;
     }
 
     nav a {
@@ -59,7 +59,6 @@
     .hero {
       text-align: center;
       padding: 0;
-      position: relative;
     }
 
     .hero img {
@@ -84,12 +83,12 @@
     }
 
     .hero-text h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 0.5rem;
     }
 
     .hero-text p {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     @keyframes fadeInUp {
@@ -110,6 +109,7 @@
       margin: 3rem auto;
       gap: 2rem;
       max-width: 1000px;
+      padding: 0 1rem;
     }
 
     .card {
@@ -117,7 +117,7 @@
       padding: 2rem;
       border-radius: 1.5rem;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      flex: 1 1 200px;
+      flex: 1 1 250px;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
@@ -133,6 +133,22 @@
       margin-bottom: 1rem;
     }
 
+    .video-section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1rem;
+      background: #fff0f5cc;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -144,11 +160,11 @@
     .verse {
       max-width: 800px;
       margin: 3rem auto;
-      padding: 2rem;
+      padding: 1.5rem;
       background: #fff0f5cc;
       border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: justify;
       color: #c71585;
       font-style: italic;
       font-weight: bold;
@@ -160,19 +176,47 @@
       margin-top: 1rem;
       font-weight: normal;
       font-size: 0.9rem;
+      text-align: right;
     }
 
     .our-story-text {
       max-width: 900px;
       margin: 2rem auto 4rem auto;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #c71585;
       line-height: 1.8;
       padding: 0 1rem;
       background: #fff0f5cc;
       border-radius: 1rem;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-note {
+        text-align: left;
+        margin-top: 0.5rem;
+      }
+      .hero-text h1 {
+        font-size: 1.6rem;
+      }
+      .hero-text p,
+      .our-story-text,
+      .card p {
+        font-size: 1rem;
+      }
+      .card {
+        padding: 1.5rem 1rem;
+      }
+      .verse {
+        font-size: 1rem;
+        padding: 1rem;
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -198,9 +242,19 @@
       <h2>📚 Our Story</h2>
       <p>How we met, fell in love, and created a world of our own.</p>
     </div>
-    <div class="card">
+    <div class="card" onclick="document.getElementById('love-video').scrollIntoView({ behavior: 'smooth' })">
       <h2>🎥 How We Fell in Love</h2>
       <p>An animated journey of every little moment that brought us together.</p>
+    </div>
+  </section>
+
+  <section class="video-section" id="love-video">
+    <h2 style="color:#c71585; text-align:center; margin-bottom:1rem;">🍿 Get Some Popcorn</h2>
+    <div class="video-wrapper">
+      <video controls controlsList="nodownload" poster="https://i.ibb.co/mCq690RP/Whats-App-Image-2025-06-11-at-13-24-42-45b1bfca.jpg" style="width:100%;" allowfullscreen>
+        <source src="https://github.com/Ananguy/mic/raw/refs/heads/main/the%20love%20movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </section>
 
